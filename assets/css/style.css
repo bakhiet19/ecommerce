@@ -444,3 +444,227 @@ button.white:hover{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+footer p{
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 14px;
+    margin: 0 0 8px 0;
+    color: #222;
+    margin-bottom: 10px;
+    transition: all 1s ease;
+}
+
+footer a:hover{
+    padding-left: 5px;
+}
+
+footer .follow i{
+    padding-right: 8px;
+    color: #465b52;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #088187;
+}
+
+footer .install .row img{
+    border: 1px solid #088187;
+    border-radius: 5px;
+}
+
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+
+
+.mobile{
+    display: none;
+}
+
+.close{
+    display: none;
+}
+
+
+
+
+@media(max-width : 799px){
+    .section-p1{
+        padding: 40px;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        position: fixed;
+        top: 0px;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        box-shadow: 0 40px 60px rgba(0, 0, 0 , 0.1);
+        background-color: #E3E6F3;
+        padding: 50px 0 0 10px;
+        transition: all .3s ease;
+    }
+    #navbar li {
+        margin-bottom: 20px;
+    }
+    .mobile{
+        display: flex;
+        justify-content: center;
+    }
+    .mobile i{
+        margin-right: 15px;
+        font-size: 20px;
+        color: #1a1a1a;
+    }
+    .close{
+        display: block;
+        cursor: pointer;
+        color: #ef3636;
+        padding: 0 20px 10px;
+    }
+
+    #hero{
+        background-position: top 30% right 30%;
+        height: 70vh;
+        padding: 0 70px;
+
+    }
+    #feature{
+        justify-content: center;
+    }
+    #feature .fe-box{
+        margin: 5px;
+    }
+    #product1 .pro-container{
+        justify-content: center;
+    }
+    #product1 .pro-container .pro{
+        margin: 5px;
+    }
+    #banner{
+        max-height: 25vh;
+    }
+
+    #sm-banner .banner-box {
+        height: 30vh;
+        min-width: 100%;
+
+    }
+    #banner3{
+        max-width: 100%;
+        padding: 0px 40px;
+    }
+    #banner3 .banner-box {
+        justify-content: center !important;
+        height: 25vh;
+        min-width: 30%;
+        max-width: 30%;
+        /* background-position: right 5%; */
+    }
+    #newsletter{
+        display: flex;
+        flex-direction: column;
+    }
+    #newsletter .newstext {
+       display: flex;
+       justify-content: center !important;
+       align-items: center !important;
+       flex-direction: column;
+       text-align: center;
+    }
+    #newsletter .newstext p{
+        text-align: center;
+    }
+    #newsletter .form {
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        min-width: 70%;
+    }
+}
+
+@media(max-width : 477px){
+    .section-p1{
+        padding: 20px;
+    }
+    #header{
+        padding: 10px 30px;
+    }
+    #hero{
+        background-position: 65%;
+        padding: 0 10px;
+        height: 50vh;
+    }
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 26px;
+    }
+    #feature .fe-box{
+        width: 155px;
+        margin: 5px;
+    }
+    #product1 .pro-container .pro{
+        width: 100%;
+    }
+    .banner-box-two{
+        margin-top: 15px;
+    }
+    #banner3{
+        padding: 0 20px;
+        display: block;
+    }
+    #banner3 .banner-box{
+        min-width: 100%;
+    }
+    #newsletter .form {
+        min-width: 100%;
+    }
+    #newsletter .form input {
+        width: 70%;
+    }
+    footer{
+        display: block;
+        text-align: center;
+        margin: 0 auto !important;
+    }
+    footer .col{
+        min-width: 100%;
+        text-align: center;
+        margin: 20px auto !important;
+        justify-content: center;
+        align-items: center;
+    }
+}
