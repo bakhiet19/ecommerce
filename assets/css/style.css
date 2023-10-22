@@ -513,6 +513,150 @@ footer .install img{
     display: none;
 }
 
+hr{
+    display: none;
+}
+
+
+
+#page-header{
+    background-image: url('../img/banner/b1.jpg');
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 14px;
+    flex-direction: column;
+}
+
+#page-header h2,
+#page-header p{
+    color: #fff;
+}
+
+
+#pagination{
+    text-align: center;
+}
+
+#pagination a{
+    padding: 15px 20px;
+    background-color: #088178;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#pagination a i{
+    font-size: 16px;
+}
+
+
+#prodetails .single-pro-image{
+    width: 40%;
+    margin-right: 50px;
+}
+
+
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col img{
+    opacity: .8;
+    flex-basis: 24%;
+}
+
+
+.small-img-col img:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+
+#prodetails{
+    display: flex;
+    margin-top: 30px;
+}
+
+
+#prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 25px;
+}
+
+
+#prodetails .single-pro-details h4{
+    padding: 40px 0 20px;
+}
+
+#prodetails .single-pro-details h2{
+    font-size: 26px;
+}
+
+
+#prodetails .single-pro-details select{
+    display: block;
+    padding: 4px 10px;
+    margin: 10px 0;
+}
+
+#prodetails .single-pro-details input[type = 'number']{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+#prodetails .single-pro-details input[type = 'number']:focus{
+    outline: none;
+}
+
+#prodetails .single-pro-details button{
+    background-color: #088178;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -666,5 +810,19 @@ footer .install img{
         margin: 20px auto !important;
         justify-content: center;
         align-items: center;
+    }
+
+    #prodetails{
+        flex-direction: column;
+    }
+    #prodetails .single-pro-image{
+        width: 100%;
+    }
+
+    #prodetails .single-pro-details{
+        width: 100%;
+        /* text-align: center; */
+    }#prodetails .single-pro-details p{
+        letter-spacing: 1.3px;
     }
 }
