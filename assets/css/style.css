@@ -7,6 +7,11 @@
     text-transform: capitalize;
 }
 
+:root{
+    --main-color : #088178;
+    --white-color : #fff;
+}
+
 h1{
     font-size: 46px;
     text-transform: uppercase;
@@ -28,10 +33,70 @@ h6{
 }
 
 
-#header{
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+button.normal{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 15px;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    border: none;
+    outline: none;
+    transition: all 1s ease;
+}
+
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: var(--white-color);
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--white-color);
+    outline: none;
+    transition: all 1s ease;
+}
+
+button.white:hover{
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+.mobile{
+    display: none;
+}
+
+.close{
+    display: none;
+}
+
+
+.flex-between{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* start header section */
+
+#header{ 
     padding: 20px 80px;
     background-color: #E3E6F3;
     box-shadow: 0px 5px 15px rgba(0, 0, 0 , 0.6);
@@ -40,12 +105,6 @@ h6{
     left: 0;
     right: 0;
     z-index: 100;
-}
-
-#header #navbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #header #navbar li{
@@ -62,7 +121,7 @@ h6{
 
 #header #navbar li a:hover,
 #header #navbar li a.active{
-    color: #088178;
+    color: var(--main-color);
 }
 
 #navbar li a.active::after,
@@ -70,15 +129,25 @@ h6{
     content: '';
     width: 50%;
     height: 2px;
-    background-color: #088178;
+    background-color: var(--main-color);
     position: absolute;
     bottom: -4px;
     left: 1px;
 }
 
+
+/* end header section */
+
+
+
+
+
+
+/* start hero section */
+
 #hero{
     background-image: url('../img/hero4.png');
-    background-position: top 25% right 0;
+    background-position: right 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -90,11 +159,13 @@ h6{
     justify-content: center;
     flex-direction: column;
 }
+
 #hero h4{
     padding-bottom: 15px;
 }
+
 #hero h1{
-    color: #088178;
+    color: var(--main-color);
 }
 
 #hero button{
@@ -106,18 +177,23 @@ h6{
     background-repeat: no-repeat;
     cursor: pointer;
     font-weight: 700;
-    color: #088178;
+    color: var(--main-color);
 }
 
-.section-p1{
-    padding: 40px 80px;
-}
+/* end hero section */
 
-.section-m1{
-    margin: 40px 0;
+
+
+
+
+/* start feature section */
+
+#feature{
+    flex-wrap: wrap;
 }
 
 #feature .fe-box{
+    cursor: pointer;
     width: 180px;
     text-align: center;
     padding: 25px 15px;
@@ -125,14 +201,6 @@ h6{
     border: 1px solid #cce7d0;
     border-radius: 5px;
     margin: 15px 0;
-}
-
-#feature{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
 }
 
 #feature .fe-box:hover{
@@ -144,7 +212,7 @@ h6{
     padding: 10px 13px;
     line-height: 1;
     border-radius: 4px;
-    color: #088178;
+    color: var(--main-color);
     background-color: #fddde4;
 }
 
@@ -153,17 +221,27 @@ h6{
     margin-bottom: 10px;
 }
 
+/* end feature section */
 
 
+
+
+
+
+
+
+/* start product section */
 
 #product1{
     text-align: center;
 }
 
+#product1 h2{
+    letter-spacing: 2.5px;
+}
+
 #product1 .pro-container{
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding-top: 20px;
 }
 
@@ -180,9 +258,7 @@ h6{
     position: relative;
 }
 
-#product1 h2{
-    letter-spacing: 2.5px;
-}
+
 
 #product1 .pro:hover{
     box-shadow: 20px 20px 30px rgba(0, 0, 0 , 0.2);
@@ -209,7 +285,7 @@ h6{
     color: #1a1a1a;
 }
 
-#product1 .pro .des i{
+#product1 .pro .des .star i{
     font-size: 12px;
     color: rgb(243, 182, 26);
 }
@@ -218,7 +294,7 @@ h6{
     padding-top: 7px;
     font-size: 15px;
     font-weight: 700;
-    color: #088178;
+    color: var(--main-color);
 }
 
 #product1 .pro #cart{
@@ -228,33 +304,42 @@ h6{
     border-radius: 50px;
     background-color: #e8f6ea;
     font-weight: 500;
-    color: #088178;
+    color: var(--main-color);
     border: 1px solid #cce7d0;
     position: absolute;
     bottom: 10px;
     right: 10px;
 }
 
+/* end product section */
+
+
+
+
+
+
+
+
+/* start banner section */
+
 #banner{
     background-image: url('../img/banner/b2.jpg');
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     flex-direction: column;
     height: 40vh;
     width: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center; 
 }
 
 #banner h4{
-    color: #fff;
+    color: var(--white-color);
     font-size: 16px;
+    
 }
 
 #banner h2{
-    color: #fff;
+    color: var(--white-color);
     font-size: 40px;
     padding: 10px 0;
 }
@@ -264,45 +349,17 @@ h6{
     
 }
 
-button.normal{
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 15px;
-    color: #000;
-    cursor: pointer;
-    border-radius: 4px;
-    background-color: #fff;
-    border: none;
-    outline: none;
-    transition: all 1s ease;
-}
-
-button.white{
-    font-size: 13px;
-    font-weight: 600;
-    padding: 10px 20px;
-    color: #fff;
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid #fff;
-    outline: none;
-    transition: all 1s ease;
-}
-
-button.white:hover{
-    background-color: #088178;
-    color: #fff;
+#sm-banner{
+    flex-wrap: wrap;
+    
 }
 
 #sm-banner .banner-box:hover button{
-    background-color: #088178;
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--white-color);
 }
 
 #sm-banner .banner-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     flex-direction: column;
     height: 50vh;
@@ -315,15 +372,10 @@ button.white:hover{
     border-radius: 5px;
 }
 
-#sm-banner{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
-}
+
 
 #sm-banner h4{
-    color: #fff;
+    color: var(--white-color);
     font-size: 20px;
     font-weight: 300;
 }
@@ -351,16 +403,11 @@ button.white:hover{
 }
 
 #banner3{
-    display: flex;
     flex-wrap: wrap;
     padding: 0 80px;
-    justify-content: space-between;
 }
 
 #banner3 .banner-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     flex-direction: column;
     height: 30vh;
@@ -375,7 +422,7 @@ button.white:hover{
 }
 
 #banner3 h2{
-    color: #fff;
+    color: var(--white-color);
     font-weight: 900;
     font-size: 22px;
 }
@@ -394,11 +441,18 @@ button.white:hover{
     background-image: url('../img/banner/b16.jpg');
 }
 
+/* end banner section */
+
+
+
+
+
+/* start newsletter section */
+
+
+
 #newsletter{
     background-image: url('../img/banner/b14.png');
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
     background-repeat: no-repeat;
     background-color: #041e41;
@@ -407,7 +461,7 @@ button.white:hover{
 .newstext h4{
     font-weight: 700;
     font-size: 22px;
-    color: #fff;
+    color: var(--white-color);
 }
 
 .newstext p{
@@ -438,17 +492,15 @@ button.white:hover{
 }
 
 #newsletter .form button{
-    background-color: #088187;
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--main-color);
     white-space: no-wrap;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
 footer{
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 footer .col{
@@ -492,11 +544,11 @@ footer .follow i{
 
 footer .follow i:hover,
 footer a:hover{
-    color: #088187;
+    color: var(--main-color);
 }
 
 footer .install .row img{
-    border: 1px solid #088187;
+    border: 1px solid var(--main-color);
     border-radius: 5px;
 }
 
@@ -505,18 +557,8 @@ footer .install img{
 }
 
 
-.mobile{
-    display: none;
-}
 
-.close{
-    display: none;
-}
-
-hr{
-    display: none;
-}
-
+/* start page-header page */
 
 
 #page-header{
@@ -524,17 +566,13 @@ hr{
     width: 100%;
     height: 40vh;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     padding: 14px;
     flex-direction: column;
 }
 
 #page-header h2,
 #page-header p{
-    color: #fff;
+    color: var(--white-color);
 }
 
 
@@ -544,8 +582,8 @@ hr{
 
 #pagination a{
     padding: 15px 20px;
-    background-color: #088178;
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--white-color);
     border-radius: 5px;
     font-weight: 600;
 }
@@ -619,19 +657,20 @@ hr{
 }
 
 #prodetails .single-pro-details button{
-    background-color: #088178;
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--white-color);
 }
 
+/* end shop page */
 
+
+
+
+/* start blog page */
 
 .blog-header{
     background-image: url('../img/banner/b19.jpg');
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-
 }
 
 
@@ -643,7 +682,6 @@ hr{
 #blog .blog-box{
     display: flex;
     width: 100%;
-    /* flex-wrap: wrap; */
     align-items: center;
 }
 
@@ -665,8 +703,6 @@ hr{
 #blog .blog-details{
     width: 50%;
 }
-
-
 
 #blog .blog-details a{
     font-size: 11px;
@@ -692,12 +728,12 @@ hr{
 
 
 #blog .blog-details a:hover{
-    color: #088178;
+    color: var(--main-color);
 }
 
 
 #blog .blog-details a:hover::after{
-    background-color: #088187;
+    background-color: var(--main-color);
 }
 
 #blog .blog-box{
@@ -713,6 +749,9 @@ hr{
     font-weight: 700;
     z-index: -1;
 }
+
+/* end blog page */
+
 
 
 .about-header{
@@ -740,11 +779,6 @@ hr{
 }
 
 
-#about-app{
-    text-align: center;
-}
-
-
 #about-app .video{
     width: 70%;
     height: 100%;
@@ -758,12 +792,9 @@ hr{
     border-radius: 20px;
 }
 
+/* end about page */
 
-#contact-details{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 #contact-details .details{
     width: 40%;
@@ -844,8 +875,8 @@ hr{
 
 
 #form-details form button{
-    background-color: #088178;
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--white-color);
     padding: 12px 32px ;
 }
 
@@ -880,6 +911,13 @@ hr{
     margin-right: 15px;
 }
 
+/* end contact page */
+
+
+
+
+
+/* start cart page */
 
 #cart{
     width: 100%;
@@ -976,8 +1014,8 @@ hr{
 }
 
 #coupon button{
-    background-color: #088178;
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--white-color);
 }
 
 
@@ -1008,19 +1046,69 @@ hr{
 
 
 #subtotal button{
-    background-color: #088178;
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--white-color);
 }
 
+.slider{
+    width: 50%;
+    margin: 30px auto;
+}
 
+.slider h2,
+.slider p{
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.slider .small-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+}
 
+.slider .e{
+    background-color: var(--main-color);
+}
 
+.slider img{
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px;
+}
 
+.btn-slider{
+    display: flex;
+    justify-content: center;
+}
 
+.btn-slider button{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+    
+}
 
+.btn-slider button:hover{
+    cursor: pointer;
+    background-color: var(--main-color)}
 
+#left , #right{
+    max-height: 40px;
+    max-width: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
 
+#left:hover , #right:hover{
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
 
 
 
@@ -1042,7 +1130,7 @@ hr{
         box-shadow: 0 40px 60px rgba(0, 0, 0 , 0.1);
         background-color: #E3E6F3;
         padding: 50px 0 0 10px;
-        transition: all .3s ease;
+        transition: all .5s ease;
     }
     #navbar li {
         margin-bottom: 20px;
@@ -1166,6 +1254,9 @@ hr{
     }#contact-details .details{
         width: 100%;
     }
+    .slider{
+        width: 100%;
+    }
 }
 
 
@@ -1284,6 +1375,9 @@ hr{
         width: 80%;
     }
     #cart-add #subtotal{
+        width: 100%;
+    }
+    .slider{
         width: 100%;
     }
 }
